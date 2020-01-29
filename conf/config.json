@@ -1,0 +1,217 @@
+{"spec_year": 2019,
+  "spec_version": "Test",
+
+  "GRN_MM": {
+    "refresh_dt": "2019-12-09",
+    "project": "bb2121",
+    "folder": "Grn/grn",
+    "rules": {
+      "duplication": {
+        "deid_celgenebb2121_mm_mancur_radiation_20191209_235458": ["euid","radiation_time"],
+        "deid_celgenebb2121_mm_mancur_soft_tissue_imaging_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_mancur_survival_20191209_235458": ["euid"],
+        "deid_celgenebb2121_mm_mancur_surgery_20191209_235458": ["euid", "surgery_time"],
+        "deid_celgenebb2121_mm_mancur_bone_marrow_path_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_mancur_performance_20191209_235458": ["euid", "assessment_time"],
+        "deid_celgenebb2121_mm_mancur_labs_serum_beta2_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_mancur_bone_lesion_20191209_235458": ["euid","test_time"],
+        "deid_celgenebb2121_mm_mancur_labs_m_protein_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_mancur_labs_flc_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_mancur_treatment_20191209_235458": ["euid", "regimen_start_time"],
+        "deid_celgenebb2121_mm_mancur_pt_char_20191209_235458": ["euid"],
+        "deid_celgenebb2121_mm_mancur_cellular_tx_20191209_235458": ["euid", "cell_tx_time"],
+        "deid_celgenebb2121_mm_discrete_vitals_20191209_235458": ["euid", "vital_time"],
+        "deid_celgenebb2121_mm_discrete_utilization_20191209_235458": ["euid", "admission_time"],
+        "deid_celgenebb2121_mm_discrete_labs_neutrophils_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_discrete_labs_hemoglobin_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_discrete_labs_wbc_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_discrete_labs_ldh_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_discrete_labs_albumin_20191209_235458" :["euid", "test_time"],
+        "deid_celgenebb2121_mm_discrete_labs_calcium_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_discrete_labs_platelets_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_discrete_labs_creatinine_20191209_235458": ["euid", "test_time"]
+      },
+      "missing": {
+        "deid_celgenebb2121_mm_mancur_radiation_20191209_235458": ["euid","radiation_time"],
+        "deid_celgenebb2121_mm_mancur_soft_tissue_imaging_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_mancur_survival_20191209_235458": ["euid"],
+        "deid_celgenebb2121_mm_mancur_surgery_20191209_235458": ["euid", "surgery_time"],
+        "deid_celgenebb2121_mm_mancur_bone_marrow_path_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_mancur_performance_20191209_235458": ["euid", "assessment_time"],
+        "deid_celgenebb2121_mm_mancur_labs_serum_beta2_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_mancur_bone_lesion_20191209_235458": ["euid","test_time"],
+        "deid_celgenebb2121_mm_mancur_labs_m_protein_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_mancur_labs_flc_20191209_235458": ["euid", "test_time"],
+        "deid_celgenebb2121_mm_mancur_treatment_20191209_235458": ["euid", "regimen_start_time"],
+        "deid_celgenebb2121_mm_mancur_pt_char_20191209_235458": ["euid"]
+      },
+      "string_tables":{"value": "value" ,
+                      "tables":[
+                        "deid_celgenebb2121_mm_discrete_labs_ldh_20191209_235458",
+                        "deid_celgenebb2121_mm_mancur_labs_serum_beta2_20191209_235458",
+                        "deid_celgenebb2121_mm_mancur_labs_m_protein_20191209_235458",
+                        "deid_celgenebb2121_mm_mancur_labs_flc_20191209_235458",
+                        "deid_celgenebb2121_mm_discrete_labs_neutrophils_20191209_235458",
+                        "deid_celgenebb2121_mm_discrete_labs_albumin_20191209_235458",
+                        "deid_celgenebb2121_mm_discrete_labs_wbc_20191209_235458",
+                        "deid_celgenebb2121_mm_discrete_labs_hemoglobin_20191209_235458",
+                        "deid_celgenebb2121_mm_discrete_labs_platelets_20191209_235458",
+                        "deid_celgenebb2121_mm_discrete_labs_calcium_20191209_235458",
+                        "deid_celgenebb2121_mm_discrete_labs_creatinine_20191209_235458"]},
+     "death_date": {"mm_survival": ["death_time"]}
+    },
+    "rule_sequence": ["duplication", "missing",  "string_tables"]
+  },
+  "COTA": { 
+    "refresh_dt": "2019-06-28",
+    "folder": "cota",
+    "database": "exp_synthetic_cohort_grn",
+    "rules": {
+      "gender": "A",
+      "duplication": {
+        "bb2121_adverse_events": ["patient_id"],
+        "bb2121_cellular_therapy": ["patient_id", "delta_start"],
+        "bb2121_comorbidities": ["patient_id"],
+        "bb2121_comorbidities_subset": ["patient_id"],
+        "bb2121_cytogenetics": ["patient_id", "delta_cytogenetics", "methodology", "test"],
+        "bb2121_date_of_initial_visit": ["patient_id"],
+        "bb2121_date_of_last_contact": ["patient_id"],
+        "bb2121_demographics": ["patient_id"],
+        "bb2121_height_and_weight": ["patient_id","delta_height_and_weight"],
+        "bb2121_lytic_bone_lesion": ["patient_id", "delta_lytic_bone_lesion"],
+        "bb2121_mm_diagnosis_info": ["patient_id", "disease"],
+        "bb2121_pathology": ["patient_id", "delta_pathology", "methodology", "test"],
+        "bb2121_performance_status": ["patient_id", "delta_performance_status"],
+        "bb2121_plasmacytoma": ["patient_id", "delta_plasmacytoma"],
+        "bb2121_programmatic_admin_data": ["patient_id"],
+        "bb2121_radiation_therapy": ["patient_id", "delta_start"],
+        "bb2121_smoking_history": ["patient_id"]
+      },
+      "missing": {
+        "bb2121_adverse_events": ["patient_id"],
+        "bb2121_cellular_therapy": ["patient_id", "delta_start"],
+        "bb2121_comorbidities": ["patient_id"],
+        "bb2121_comorbidities_subset": ["patient_id"],
+        "bb2121_cytogenetics": ["patient_id", "delta_cytogenetics", "methodology", "test"],
+        "bb2121_date_of_initial_visit": ["patient_id"],
+        "bb2121_date_of_last_contact": ["patient_id"],
+        "bb2121_demographics": ["patient_id"],
+        "bb2121_height_and_weight": ["patient_id","delta_height_and_weight"],
+        "bb2121_lytic_bone_lesion": ["patient_id", "delta_lytic_bone_lesion"],
+        "bb2121_mm_diagnosis_info": ["patient_id", "disease"],
+        "bb2121_pathology": ["patient_id", "delta_pathology", "methodology", "test"],
+        "bb2121_performance_status": ["patient_id", "delta_performance_status"],
+        "bb2121_plasmacytoma": ["patient_id", "delta_plasmacytoma"],
+        "bb2121_programmatic_admin_data": ["patient_id"],
+        "bb2121_radiation_therapy": ["patient_id", "delta_start"],
+        "bb2121_smoking_history": ["patient_id"]
+      },
+      "string_tables": ["mm_labs_ldh", "mm_serum_beta2", "mm_labs_ldh", "mm_m_protein", "mm_flc", "mm_labs_neutrophils", "mm_labs_albumin", "mm_labs_wbc", "mm_labs_hemoglobin", "mm_labs_platelets", "mm_labs_calcium", "mm_labs_creatinine"],
+      "anchor_date": "2018-12-31"
+    },
+    "rule_sequence": ["duplication", "missing"]
+  },
+  "TEMPUS": {
+    "refresh_dt": "2019-02-14",
+    "folder": "tempus",
+    "database": "exp_synthetic_cohort_grn",
+    "rules": {
+      "gender": "A",
+      "duplication": {
+        "deid_ath_manual_curation_mm_radiation_20190628_152228": ["euid","radiation_time"],
+        "deid_ath_manual_curation_mm_soft_tissue_imaging_20190628_152228": ["euid", "test_time"],
+        "deid_ath_manual_curation_mm_survival_20190628_152228": ["euid"],
+        "deid_ath_manual_curation_mm_radiation_20190628_152228": ["euid", "radiation_time"],
+        "deid_ath_manual_curation_mm_surgery_20190628_152228": ["euid", "surgery_time"],
+        "deid_ath_manual_curation_mm_bone_marrow_path_20190628_152228": ["euid", "test_time"],
+        "deid_ath_manual_curation_mm_performance_20190628_152228": ["euid", "assessment_time"],
+        "deid_ath_manual_curation_mm_serum_beta2_20190628_152228": ["euid", "test_time"],
+        "deid_ath_manual_curation_mm_bone_lesion_20190628_152228": ["euid","test_time"],
+        "deid_ath_manual_curation_mm_m_protein_20190628_152228": ["euid", "test_time"],
+        "deid_ath_manual_curation_mm_flc_20190628_152228": ["euid", "test_time"],
+        "deid_ath_manual_curation_mm_treatment_20190628_152228": ["euid", "regimen_start_time"],
+        "deid_ath_manual_curation_mm_pt_characteristics_20190628_152228": ["euid"]
+      },
+      "missing": {
+        "deid_ath_manual_curation_mm_radiation_20190628_152228": ["euid","radiation_time"],
+        "deid_ath_manual_curation_mm_soft_tissue_imaging_20190628_152228": ["euid", "test_time"],
+        "deid_ath_manual_curation_mm_survival_20190628_152228": ["euid"],
+        "deid_ath_manual_curation_mm_radiation_20190628_152228": ["euid", "radiation_time"],
+        "deid_ath_manual_curation_mm_surgery_20190628_152228": ["euid", "surgery_time"],
+        "deid_ath_manual_curation_mm_bone_marrow_path_20190628_152228": ["euid", "test_time"],
+        "deid_ath_manual_curation_mm_performance_20190628_152228": ["euid", "assessment_time"],
+        "deid_ath_manual_curation_mm_serum_beta2_20190628_152228": ["euid", "test_time"],
+        "deid_ath_manual_curation_mm_bone_lesion_20190628_152228": ["euid","test_time"],
+        "deid_ath_manual_curation_mm_m_protein_20190628_152228": ["euid", "test_time"],
+        "deid_ath_manual_curation_mm_flc_20190628_152228": ["euid", "test_time"],
+        "deid_ath_manual_curation_mm_treatment_20190628_152228": ["euid", "regimen_start_time"],
+        "deid_ath_manual_curation_mm_pt_characteristics_20190628_152228": ["euid"]
+      },
+      "string_tables": ["deid_ath_manual_curation_mm_labs_ldh_20190628_152228", "deid_ath_manual_curation_mm_serum_beta2_20190628_152228", "deid_ath_manual_curation_mm_labs_ldh_20190628_152228", "deid_ath_manual_curation_mm_m_protein_20190628_152228", "deid_ath_manual_curation_mm_flc_20190628_152228", "deid_ath_manual_curation_mm_labs_neutrophils_20190628_152228", "deid_ath_manual_curation_mm_labs_albumin_20190628_152228", "deid_ath_manual_curation_mm_labs_wbc_20190628_152228", "deid_ath_manual_curation_mm_labs_hemoglobin_20190628_152228", "deid_ath_manual_curation_mm_labs_platelets_20190628_152228", "deid_ath_manual_curation_mm_labs_calcium_20190628_152228", "deid_ath_manual_curation_mm_labs_creatinine_20190628_152228"],
+      "anchor_date": "2018-12-31",
+     "death_date": {"mm_survival": ["death_time"]}
+    },
+    "rule_sequence": ["duplication"]
+  },
+  "IQVIA_MM": {
+    "refresh_dt": "2019-11-13",
+    "project": "bb2121",
+    "folder": "iqvia-ecrf/bb2121_iqvia",
+    "database": "exp_synthetic_cohort_grn",
+    "rules": {
+      "duplication": {
+        "09_-_Stem_Cell_Transplant": ["PATCOD","SCTYN","SCTDAT"],
+        "10_-_Lab_Tests_-_Serum_M-Protein": ["PATCOD","LBDAT"],
+        "11_-_Lab_Tests_-_Urine_M-Protein": ["PATCOD","LBUDAT"],
+        "12_-_Lab_Tests_-_Serum_Free_Light_Chain": ["PATCOD","LBSDAT"],
+        "13_-_Lab_Tests_-_Serum_Beta2-Microglobulin": ["PATCOD","LBBDAT"],
+        "14_-_Lab_Tests_-_Immunofixation": ["PATCOD","LBIDAT"],
+        "15_-_Lab_Tests_-_Chemistry": ["PATCOD","LBCDAT"],
+        "16_-_Lab_Tests_-_Hematology": ["PATCOD","LBHDAT"]
+      },
+      "missing": {
+      },
+      "string_tables": {"value": "ORR",
+                        "tables": ["10_-_Lab_Tests_-_Serum_M-Protein",
+                        "11_-_Lab_Tests_-_Urine_M-Protein",
+                        "12_-_Lab_Tests_-_Serum_Free_Light_Chain",
+                        "16_-_Lab_Tests_-_Hematology",
+                        "13_-_Lab_Tests_-_Serum_Beta2-Microglobulin",
+                        "15_-_Lab_Tests_-_Chemistry"]},
+      "last_dt": {"table": "19_-_Survival_Status", "dt_column": "LASTDAT", "id_column": "PATCOD", "dt_value": "DAT", "dt_type": "datetime", "ignore_value": null,"ignorecols": ["ABSDAT","DTHDAT"]},
+      "death_dt": {"table": "19_-_Survival_Status", "dt_column": "DTHDAT", "id_column": "PATCOD", "dt_value": "DAT", "dt_type": "datetime", "ignore_value": null,"ignorecols": ["ABSDAT"]},
+      "frequency": {"10_-_Lab_Tests_-_Serum_M-Protein":  {"1": ["PATCOD", "LBDAT_DT", "LBORR", "LBORRU"], "2": ["PATCOD", "LBDAT_DT", "LBORR2", "LBORRU2"]  }}
+    },
+    "rule_sequence": ["last_dt", "death_dt", "duplication", "string_tables", "missing"]
+  },
+  "GRN_DLBCL": {
+    "refresh_dt": "2019-10-28",
+    "project": "jcar017",
+    "folder": "grn/GRN",
+    "rules": {
+      "duplication": {
+        "deid_celgenejcar017_dlbcl_mancur_survival_3reg_20191028_094132": ["euid"],
+        "deid_celgenejcar017_dlbcl_mancur_pt_char_3reg_20191028_094132": ["euid"],
+        "deid_celgenejcar017_dlbcl_mancur_treatment_3reg_20191028_094132": ["euid","line_of_tx","treatment_agent"],
+        "deid_celgenejcar017_dlbcl_mancur_performance_3reg_20191028_094132": ["euid","assessment_time"],
+        "deid_celgenejcar017_dlbcl_mancur_molecular_path_3reg_20191028_094132":["euid","test_time","test_method"],
+        "deid_celgenejcar017_dlbcl_mancur_medical_hx_3reg_20191107_092856": ["euid","comorbidity_name", "comorbidity_status", "comorbidity_time"],
+        "deid_celgenejcar017_dlbcl_mancur_labs_3reg_20191028_094132": ["euid","test_name","test_time"],
+        "deid_celgenejcar017_dlbcl_mancur_imaging_3reg_20191028_094132" : ["euid","test_name","test_time"],
+        "deid_celgenejcar017_dlbcl_mancur_dx_char_3reg_20191028_094132" : ["euid"],
+        "deid_celgenejcar017_dlbcl_mancur_cellular_tx_3reg_20191028_094132" : ["euid","cell_tx_type"],
+        "deid_celgenejcar017_dlbcl_discrete_vitals_3reg_20191028_094132" : ["euid","vital_time"],
+        "deid_celgenejcar017_dlbcl_discrete_utilization_3reg_20191028_094132" : ["euid","hospitalization_class","hospitalization_urgency","hospitalization_type","admission_time"],
+        "deid_celgenejcar017_dlbcl_discrete_labs_3reg_20191028_094132" : ["euid","test_time","test_category","test_type"]
+      },
+      "missing": {
+      },
+      "string_tables": {"value": "value",
+                        "tables": ["deid_celgenejcar017_dlbcl_mancur_treatment_3reg_20191028_094132"]},
+      "last_dt": {"table": "deid_celgenejcar017_dlbcl_mancur_survival_3reg_20191028_094132", "dt_column": "last_alive_time", "id_column": "euid", "dt_value": "time", "dt_type": "float", "ignore_value": "completeness", "ignorecols": ["death_time"]},
+      "death_dt": {"table": "deid_celgenejcar017_dlbcl_mancur_survival_3reg_20191028_094132", "dt_column": "death_time", "id_column": "euid", "dt_value": "time", "dt_type": "float", "ignore_value": "completeness", "ignorecols": []}
+
+    },
+    "rule_sequence": ["last_dt", "death_dt", "duplication", "string_tables", "missing"]
+  }
+}
