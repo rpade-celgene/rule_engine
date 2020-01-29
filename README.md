@@ -1,5 +1,6 @@
-RULE ENGINE
+# RULE ENGINE
 
+## Overview
 This is a general QC pipeline to check the quality of the raw data within a dataset:
   Missing values
   Negative numeric values
@@ -8,6 +9,7 @@ This is a general QC pipeline to check the quality of the raw data within a data
 
 The engine is configuration driven. The config.py file will be the file users will work with the most. 
 
+## Usage 
 Example of Config file:
 
 To run the engine:
